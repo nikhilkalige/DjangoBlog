@@ -14,5 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'', 'blogengine.views.getRecentPosts')
+    url(r'^$', 'blogengine.views.getPosts'),
+    url(r'^(?P<selected_page>\d+)/?$', 'blogengine.views.getPosts'),
 )

@@ -122,4 +122,4 @@ LOGGING = {
     }
 }
 
-SECRET_KEY = 'addddddqwer3242342342sdfscvvbfgr'
+#SECRET_KEY = 'addddddqwer3242342342sdfscvvbfgr'
