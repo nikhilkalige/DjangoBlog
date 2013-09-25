@@ -91,6 +91,7 @@ INSTALLED_APPS += (
     'blogengine',
     'south',
     'django.contrib.flatpages',
+    'django.contrib.comments',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
