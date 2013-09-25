@@ -89,6 +89,8 @@ INSTALLED_APPS += (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'blogengine',
+    'south',
+    'django.contrib.flatpages',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
