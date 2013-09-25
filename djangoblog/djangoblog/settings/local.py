@@ -92,6 +92,8 @@ INSTALLED_APPS += (
     'south',
     'django.contrib.flatpages',
     'django.contrib.comments',
+    'django.contrib.syndication',
+
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

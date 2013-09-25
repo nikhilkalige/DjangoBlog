@@ -2,6 +2,8 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from blogengine.views import PostsFeed
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -24,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^categories/(?P<categorySlug>\w+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getCategory'),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
+    url(r'^feeds/posts/$', PostsFeed()),
 
     url(r'', include('django.contrib.flatpages.urls')),
 )
