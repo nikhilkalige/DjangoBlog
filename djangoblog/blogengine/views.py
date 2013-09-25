@@ -2,6 +2,8 @@ from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage
 from django.template import RequestContext
 from django.contrib.syndication.views import Feed
+from django.contrib.flatpages.models import FlatPage
+
 from blogengine.models import Post, Category
 
 

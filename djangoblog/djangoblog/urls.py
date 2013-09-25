@@ -1,4 +1,7 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import ListView
+from blogengine.models import Category
+
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -21,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^(?P<selected_page>\d+)/?$', 'blogengine.views.getPosts'),
 
     url(r'^\d{4}/\d{1,2}/(?P<postSlug>[-a-zA-Z0-9]+)/?$', 'blogengine.views.getPost'),
+    url(r'^categories/?$', ListView.as_view(model=Category,)),
 
     url(r'^categories/(?P<categorySlug>\w+)/?$', 'blogengine.views.getCategory'),
     url(r'^categories/(?P<categorySlug>\w+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getCategory'),
