@@ -14,8 +14,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
     url(r'^$', 'blogengine.views.getPosts'),
     url(r'^(?P<selected_page>\d+)/?$', 'blogengine.views.getPosts'),
+
     url(r'^\d{4}/\d{1,2}/(?P<postSlug>[-a-zA-Z0-9]+)/?$', 'blogengine.views.getPost'),
+
+    url(r'^categories/(?P<categorySlug>\w+)/?$', 'blogengine.views.getCategory'),
+    url(r'^categories/(?P<categorySlug>\w+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getCategory'),
+
     url(r'', include('django.contrib.flatpages.urls')),
 )
